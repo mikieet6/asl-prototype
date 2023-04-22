@@ -1,0 +1,128 @@
+{% extends "../layouts/aspel-layout.html" %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="establishment-overview">University of Croydon</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="courses-overview">Courses overview</a>
+    </li> 
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="manage-course.html">Dragon flight school</a>
+    </li> 
+  </ol>
+</div>
+{% endblock %}
+
+
+
+{% block content %}
+
+
+
+<!-- Add your page content here -->
+
+<span class="govuk-caption-l">Dragon flight school</span>  
+  <h1 class="govuk-heading-l" >Check course details</h1>
+  
+
+  <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Course name
+      </dt>
+      <dd class="govuk-summary-list__value">
+        Dragon flight school
+      </dd>
+      
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Course start date
+      </dt>
+      <dd class="govuk-summary-list__value">
+        14 August 2023
+      </dd>
+      
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Course end date
+      </dt>
+      <dd class="govuk-summary-list__value">
+        28 September 2023
+      </dd>
+      
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Animals used
+      </dt>
+      <dd class="govuk-summary-list__value">
+        &#8226; Rats (Rattus rattus)
+        <br>
+        &#8226; Mice (Rodentia)
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row"> 
+      <dt class="govuk-summary-list__key"style="padding-bottom: 0px;" >Reason for the change</dt>
+      <dd class="govuk-summary-list__value">	Gummies cotton candy halvah tiramisu pie liquorice lemon drops candy canes drag\xe9e wafer, sweet roll ice cream shortbread marzipan sugar plum brownie macaroon sweet marshmallow, topping candy lollipop caramels cookie jelly souffl\xe9 oat cake.</dd>
+    </div>
+    <hr style="margin-top:8px;border:none">
+    <a class="govuk-link" href="edit-course-details">Change course details</a>
+    <hr style="margin-top:20px;border:none">
+
+    <!-- <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Project title
+      </dt>
+      <dd class="govuk-summary-list__value">
+        Croydon University training courses
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Project licence number
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <a href="#" class="govuk-link">PP12345678</a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Project licence expiry date
+      </dt>
+      <dd class="govuk-summary-list__value">
+        26 April 2026
+      </dd>
+    </div>
+    <hr style="margin-top:8px;border:none">
+    <a class="govuk-link" href="">Change project licence</a> -->
+   
+  <hr style="margin-top:8px;border:none">
+  
+</dl>
+
+<form action="confirmation-change-date-submitted" method="post" novalidate>
+  <div class="govuk-button-group">
+  <button class="govuk-button" data-module="govuk-button">
+  Submit for approval
+  </button>
+  <a class="govuk-link" href="manage-course">Cancel</a>
+</div></form>
+
+
+
+{% endblock %}

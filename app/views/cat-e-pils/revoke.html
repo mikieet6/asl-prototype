@@ -1,0 +1,69 @@
+{% extends "../layouts/aspel-layout.html" %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="establishment-overview">University of Croydon</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="courses-overview">Courses overview</a>
+    </li> 
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="manage-course-started.html">Manage a course</a>
+    </li> 
+  </ol>
+</div>
+{% endblock %}
+
+
+
+{% block content %}
+
+
+
+<!-- Add your page content here -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+<span class="govuk-caption-l">Peter Smith-Johnson</span>
+<h1 class="govuk-heading-l" >Revoke Category E training licence</h1>
+
+  <p class="govuk-body">If Peter Smith-Johnson has any other personal licences they will not be affected. </p>
+
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="more-detail">
+    <strong>Explain why</strong> (Optional)
+    <div id="more-detail-hint" class="govuk-hint">
+     Your explination will be recorded and visible to relevant establishment and Home Office staff. 
+    </div>
+  </label>
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
+</div>
+
+
+
+<form action="check-revoke" method="post" novalidate>
+  <div class="govuk-button-group">
+    <button class="govuk-button" data-module="govuk-button">
+    Save and continue
+    </button>
+    <a class="govuk-link" href="manage-course.html">Cancel</a>
+  </div></form>
+  
+
+</div></div>
+
+{% endblock %}

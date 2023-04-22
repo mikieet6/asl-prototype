@@ -1,0 +1,74 @@
+{% extends "../layouts/aspel-layout.html" %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="establishment-overview">University of Croydon</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="courses-overview">Courses overview</a>
+    </li> 
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="manage-course-started.html">Dragon flight school</a>
+    </li> 
+  </ol>
+</div>
+{% endblock %}
+
+
+
+{% block content %}
+
+
+
+<!-- Add your page content here -->
+
+<span class="govuk-caption-l">Peter Smith-Johnson</span>
+<h1 class="govuk-heading-l" >Confirm licence revocation</h1>
+
+<dl class="govuk-summary-list">
+   
+  <div class="govuk-summary-list__row"> 
+    <dt class="govuk-summary-list__key"style="padding-bottom: 0px;" >Participant name</dt>
+    <dd class="govuk-summary-list__value">Peter Smith-Johnson</dd>
+  </div>
+  <div class="govuk-summary-list__row"> 
+    <dt class="govuk-summary-list__key"style="padding-bottom: 0px;" >Course name</dt>
+    <dd class="govuk-summary-list__value">Dragon flight school</dd>
+  </div>
+  <div class="govuk-summary-list__row"> 
+    <dt class="govuk-summary-list__key"style="padding-bottom: 0px;" >Licence type</dt>
+    <dd class="govuk-summary-list__value">Category E training licence</dd>
+    </div>
+    <div class="govuk-summary-list__row"> 
+      <dt class="govuk-summary-list__key"style="padding-bottom: 0px;" > Licence number</dt>
+      <dd class="govuk-summary-list__value">CEP-12345</dd>
+      </div>
+      <div class="govuk-summary-list__row"> 
+        <dt class="govuk-summary-list__key"style="padding-bottom: 0px;" >Reason for the cancellation</dt>
+        <dd class="govuk-summary-list__value">	Gummies cotton candy halvah tiramisu pie liquorice lemon drops candy canes drag\xe9e wafer, sweet roll ice cream shortbread marzipan sugar plum brownie macaroon sweet marshmallow, topping candy lollipop caramels cookie jelly souffl\xe9 oat cake.</dd>
+      </div>
+</dl>
+
+<form action="confirmation-revocation" method="post" novalidate>
+  <div class="govuk-button-group">
+    <button class="govuk-button" data-module="govuk-button">
+      Confirm
+    </button>
+    <a class="govuk-link" href="manage-course.html">Cancel</a>
+  </div></form>
+
+  
+
+{% endblock %}

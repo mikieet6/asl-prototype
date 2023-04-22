@@ -1,0 +1,82 @@
+{% extends "home-office-kit-layout.html" %}
+
+{% block content %}
+<!-- css specific to this template -->
+<style type="text/css">
+    .establishment-container {
+    background: #f8f8f8;
+    border: 1px solid #6f777b;
+    padding: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .establishment-metadata {
+    border-top: 3px solid #8f23b3;
+    padding-top: 15px;
+  }
+  </style> 
+  
+  <!-- Add your page content here -->
+  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+  
+      <span class="govuk-caption-l">ASPeL usability research</span> 
+      <h1 class="govuk-heading-l">
+        Training courses and Category E licences 
+      </h1>
+      <p class="govuk-body"><strong>Note:</strong></p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>This is a prototype not a live system. Nothing you enter here will be saved. </li>
+        <li>Some things may not work as expected and many links are inactive, we are here to help if you get lost. </li>
+        <li>We are testing ideas to make ASPeL easier to use, this is in no way a test of you or your abilities.</li>
+        <li>Your feedback will help us make the system better, thank you for participating!</li>
+      </ul>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">     
+      
+      <div class="establishment-container">
+        <h2 class="govuk-heading-m" style="margin-bottom:10px">
+            Task 1
+        </h2>
+        <p>
+        Create a course and apply for Category E training licences for the participants. <br>
+        </p>
+        <a href="establishment-overview.html" class="govuk-link govuk-link--no-visited-state" >Start task 1</a>
+      </div>
+
+
+      <div class="establishment-container">
+        <h2 class="govuk-heading-m" style="margin-bottom:10px">
+            Task 2
+        </h2>
+        <p class="govuk-body">Change the course dates</p>
+            <a href="establishment-overview-manage-course.html" class="govuk-link govuk-link--no-visited-state" >Start task 2</a>
+      </div>
+
+
+      <div class="establishment-container">
+        <h2 class="govuk-heading-m" style="margin-bottom:10px">
+            Task 3
+        </h2>
+        <p class="govuk-body">Revoke Peter Smith-Johnson's Category E training licence</p>
+            <a href="establishment-overview-manage-course.html" class="govuk-link govuk-link--no-visited-state" >Start task 3</a>
+      </div>
+
+       <div class="establishment-container">
+        <h2 class="govuk-heading-m" style="margin-bottom:10px">
+            Task 4
+        </h2>
+        <p>
+        Cancel the Dragon flight school course <br>
+          <a href="establishment-overview-manage-course.html" class="govuk-link govuk-link--no-visited-state" >Start task 4</a>
+        </p>
+      </div>
+     
+  </div>
+  
+  </div>
+
+{% endblock %}

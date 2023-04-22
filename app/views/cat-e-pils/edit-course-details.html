@@ -1,0 +1,304 @@
+{% extends "../layouts/aspel-layout.html" %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="establishment-overview">University of Croydon</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="courses-overview">Courses overview</a>
+    </li> 
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="manage-course.html">Dragon flight school</a>
+    </li> 
+  </ol>
+</div>
+{% endblock %}
+
+
+
+{% block content %}
+
+
+
+<!-- Add your page content here -->
+
+
+<span class="govuk-caption-l">Dragon flight school</span> 
+<h1 class="govuk-heading-l" >Edit course details</h1>
+
+<dl class="govuk-summary-list govuk-summary-list--no-border">
+  <div class="govuk-summary-list__row"> 
+  <dt class="govuk-summary-list__key"style="padding-bottom: 0px;" >Project title</dt>
+  <dd class="govuk-summary-list__value">Croydon University training courses</dd>
+  </div>
+  <div class="govuk-summary-list__row"> 
+    <dt class="govuk-summary-list__key"style="padding-bottom: 0px;" >Project licence number</dt>
+    <dd class="govuk-summary-list__value"><a href="#" class="govuk-link">PP12345678</a></dd>
+  </div>
+  <div class="govuk-summary-list__row"> 
+    <dt class="govuk-summary-list__key"style="padding-bottom: 0px;" >Project licence expiry date</dt>
+    <dd class="govuk-summary-list__value">26 April 2026</dd>
+  </div>
+ 
+</dl>
+
+<!-- <dl class="govuk-summary-list govuk-summary-list--no-border">
+   
+  <div class="govuk-summary-list__row"> 
+    <dt class="govuk-summary-list__key"style="padding-bottom: 0px;" >Course name</dt>
+    <dd class="govuk-summary-list__value">Dragon flight school</dd>
+  </div>
+  <div class="govuk-summary-list__row"> 
+    <dt class="govuk-summary-list__key"style="padding-bottom: 0px;" >Start date</dt>
+    <dd class="govuk-summary-list__value">14 Aug 2023</dd>
+    <dd class="govuk-summary-list__value"></dd>
+    </div>
+    <div class="govuk-summary-list__row"> 
+      <dt class="govuk-summary-list__key"style="padding-bottom: 0px;" >End date</dt>
+      <dd class="govuk-summary-list__value">	28 Sep 2023</dd>
+      <dd class="govuk-summary-list__value"></dd>
+      </div>
+</dl> -->
+
+
+<!-- <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+      <p class="govuk-fieldset__heading"><strong>New start date</strong></p>
+    </legend>
+    <div id="passport-issued-hint" class="govuk-hint">
+      For example, 14 8 2022
+    </div>
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div> -->
+
+<!-- <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+      <p class="govuk-fieldset__heading"><strong>New end date</strong></p>
+    </legend>
+    <div id="passport-issued-hint" class="govuk-hint">
+      For example, 14 8 2022
+    </div>
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div> -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>
+    All participant's Category E training licences will be activated on the course start date and revoked on the end date.
+  </strong>
+</div>
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+  </div></div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="event-name">
+      <strong>Course name</strong>
+    </label>
+    <input class="govuk-input govuk-!-width-three-quarters" id="three-quarters" name="three-quarters" type="text" style="width: 50% !important;">
+  </div>
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+        <p class="govuk-fieldset__heading"><strong>Course start date</strong></p>
+      </legend>
+      <div id="passport-issued-hint" class="govuk-hint">
+        For example, 14 8 2023
+      </div>
+      <div class="govuk-date-input" id="passport-issued">
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+              Day
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+              Month
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+              Year
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="">
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+        <p class="govuk-fieldset__heading"><strong>Course end date</strong></p>
+      </legend>
+      <div id="passport-issued-hint" class="govuk-hint">
+        For example, 14 9 2023
+      </div> 
+      <div class="govuk-date-input" id="passport-issued">
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+              Day
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+              Month
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+              Year
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="">
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+        <p class="govuk-fieldset__heading"><strong>Animals to be used for this course</strong></p>
+      </legend>
+      <div id="waste-hint" class="govuk-hint">
+        Select all that apply.
+      </div>
+      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+          <label class="govuk-label govuk-checkboxes__label" for="waste">
+            Ferrets (Mustela furo)
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+          <label class="govuk-label govuk-checkboxes__label" for="waste">
+            Hamster (Mesocricetus auratus)
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+          <label class="govuk-label govuk-checkboxes__label" for="waste">
+            Hamster (Cricetulus griseus)
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+            Mice (Rodentia)
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Rat (Rattus rattus)
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="more-detail">
+    <strong>Explain why you are making this change </strong>
+  </label>
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
+</div>
+    </div></div>
+
+<form action="check-edit-course-details" method="post" novalidate>
+    <button class="govuk-button" data-module="govuk-button">
+    Save and continue
+    </button>
+  </form>
+
+{% endblock %}

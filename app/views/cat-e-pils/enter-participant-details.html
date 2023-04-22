@@ -1,0 +1,172 @@
+{% extends "../layouts/aspel-layout.html" %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="establishment-overview">University of Croydon</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="courses-overview">Create a course</a>
+    </li> 
+  </ol>
+</div>
+{% endblock %}
+
+
+
+{% block content %}
+
+
+
+<!-- Add your page content here -->
+
+<span class="govuk-caption-l">Dragon flight school</span>
+  <h1 class="govuk-heading-l" >Enter participant details</h1>
+
+  <p class="govuk-body">
+    Apply for a category E personal licence (PIL-E) on behalf of this participant.
+    
+    <br>Once the application is approved, they will be automatically added to the course.
+  </p>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="event-name">
+      <strong>First name</strong>
+    </label>
+    <input class="govuk-input" id="three-quarters" name="three-quarters" type="text" >
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="event-name">
+      <strong>Last name</strong>
+    </label>
+    <input class="govuk-input" id="three-quarters" name="three-quarters" type="text" >
+  </div>
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+        <p class="govuk-fieldset__heading"><strong>Date of birth</strong></p>
+      </legend>
+      <div id="passport-issued-hint" class="govuk-hint">
+        For example, 14 9 2023
+      </div> 
+      <div class="govuk-date-input" id="passport-issued">
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+              Day
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+              Month
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+              Year
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="">
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+  
+  <!-- <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+      <label class="govuk-label govuk-checkboxes__label" for="waste">
+       I confirm that this person is over 18 years old.
+      </label>
+    </div>
+    <br> -->
+
+  
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="event-name">
+      <strong>Email address</strong>
+    </label>
+    <input class="govuk-input" id="three-quarters" name="three-quarters" type="text" >
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="event-name">
+      <strong>Organisation</strong>
+    </label>
+    <input class="govuk-input" id="three-quarters" name="three-quarters" type="text" >
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="event-name">
+      <strong>Job title, career stage or qualification</strong>
+      <div id="passport-issued-hint" class="govuk-hint">
+        For example trainee doctor, consultant or registrar
+      </div>
+    </label>
+    <input class="govuk-input" id="three-quarters" name="three-quarters" type="text" >
+  </div>
+  
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="event-name">
+      <strong>Field of expertise</strong>
+      <div id="passport-issued-hint" class="govuk-hint">
+        For example head and neck surgeon
+      </div>
+    </label>
+    <input class="govuk-input" id="three-quarters" name="three-quarters" type="text" >
+  </div>
+
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="event-name">
+      <strong>How will this course contribute to their career development?</strong>
+      <div id="passport-issued-hint" class="govuk-hint">
+        Explain how the participant will improve or maintain their career using the skills gained from this training 
+      </div>
+    </label>
+    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint" ></textarea>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="event-name">
+      <strong>Other notes</strong>
+      <div id="passport-issued-hint" class="govuk-hint">
+        Optional
+      </div>
+    </label>
+    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint" ></textarea>
+  </div>
+
+  <form action="check-participant-details" method="post" novalidate>
+    <div class="govuk-button-group">
+    <button class="govuk-button" data-module="govuk-button">
+    Save and continue
+    </button>
+    <a class="govuk-link" href="">Cancel</a></div>
+  </form>
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends "../layouts/aspel-layout.html" %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="establishment-overview">University of Croydon</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="courses-overview">Courses overview</a>
+    </li> 
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="manage-course">Dragon flight school</a>
+    </li>
+  </ol>
+</div>
+{% endblock %}
+
+
+
+{% block content %}
+
+
+
+<!-- Add your page content here -->
+
+<span class="govuk-caption-l">Peter Smith-Johnson</span> 
+  <h1 class="govuk-heading-l" >Category E training licence revoked</h1>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukPanel({
+        titleText: "Confirmed",
+        html: ""
+      }) }}
+
+
+      <h2 class="govuk-heading-m">
+        What happens next
+      </h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <!-- <li>The revocation request will be sent to your establishment's NTCO (Named training and competency officer) for review.</li>
+        <li>When the request is approved the participant's Category E personal training licence will be revoked.</li> -->
+        <li>The participant will receive an email informing them that their licence has been revoked.</li>
+      </ul>
+      <p>
+        <a href="manage-course-participant-revoked.html" style="color: #1d70b8;">Manage 'Dragon flight school' course</a>
+        <br><a href="courses-overview" style="color: #1d70b8;">Return to training courses</a>
+      </p>
+    </div>
+  </div>
+  
+  
+
+{% endblock %}

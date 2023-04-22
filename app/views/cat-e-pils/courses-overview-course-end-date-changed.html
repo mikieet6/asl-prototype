@@ -1,0 +1,150 @@
+{% extends "../layouts/aspel-layout.html" %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="establishment-overview">University of Croydon</a>
+    </li>
+    <!-- <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Create a course</a>
+    </li> -->
+  </ol>
+</div>
+{% endblock %}
+
+
+
+{% block content %}
+
+
+
+<!-- Add your page content here -->
+
+
+
+  <span class="govuk-caption-xl" style="color: #000">University of Croydon &nbsp; </span> 
+
+  <h1 class="govuk-heading-l" style="margin-bottom:30px;">Training courses</h1>
+
+  <a href="choose-project-licence.html"><button class="govuk-button" data-module="govuk-button">
+    Create a new course 
+  </button></a>
+
+  <table class="govuk-table" >
+    <caption class="govuk-table__caption govuk-table__caption--m"></caption>
+  
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+    
+          <th scope="col" class="govuk-table__header" aria-sort="none">Course name</th>
+    
+          <th scope="col" class="govuk-table__header" aria-sort="none">Start date</th>
+
+          <th scope="col" class="govuk-table__header" aria-sort="none" >End date</th>
+    
+          <th scope="col" class="govuk-table__header " aria-sort="none" >Participants</th>
+
+          <th scope="col" class="govuk-table__header " aria-sort="none" >Licences granted</th>
+
+          <th scope="col" class="govuk-table__header " aria-sort="ascending" >Status</th>
+
+        </tr>
+      </thead>
+    
+      <tbody class="govuk-table__body">
+
+        <tr class="govuk-table__row">
+    
+          <td class="govuk-table__cell"><a href="manage-course.html" class="govuk-link">Dragon flight school</a></td>
+    
+          <td class="govuk-table__cell" data-sort-value="14 Aug 2023 - 28 Sep 2023">14 Aug 2023</td>
+
+          <td class="govuk-table__cell" data-sort-value="14 Aug 2023 - 28 Sep 2023">28 Sep 2023</td>
+    
+          <td class="govuk-table__cell " data-sort-value="12">12</td>
+
+          <td class="govuk-table__cell" data-sort-value="4">4</td>
+
+          <td class="govuk-table__cell " data-sort-value="pending" >
+            <strong class="govuk-tag govuk-tag--grey" style="background-color: #cbcbcb;">
+            Pending
+          </strong></td>
+
+    
+        </tr>
+
+        <tr class="govuk-table__row">
+    
+          <td class="govuk-table__cell"><a href="#" class="govuk-link">Collabora tauras sentra</a></td>
+    
+          <td class="govuk-table__cell" data-sort-value="25 Jun 2023 - 29 Jul 2023">25 Jun 2023</td>
+
+          <td class="govuk-table__cell" data-sort-value="25 Jun 2023 - 29 Jul 2023">29 Jul 2023</td>
+    
+          <td class="govuk-table__cell " data-sort-value="12">11</td>
+
+          <td class="govuk-table__cell " data-sort-value="4">8</td>
+
+          <td class="govuk-table__cell " data-sort-value="pending">
+            <strong class="govuk-tag govuk-tag--grey" style="background-color: #cbcbcb;">
+            Pending
+          </strong></td>
+    
+        </tr>
+
+        <tr class="govuk-table__row">
+    
+          <td class="govuk-table__cell"><a href="manage-course-started-changed-end-date.html" class="govuk-link">Owl habitat protection</a></td>
+    
+          <td class="govuk-table__cell" data-sort-value="15 Apr 2023 - 02 Jun 2023">15 Apr 2023</td>
+
+          <td class="govuk-table__cell" data-sort-value="15 Apr 2023 - 02 Jun 2023"><a href="" class="govuk-link">25 Jun 2023</a> <br> <strong class="govuk-tag govuk-tag--grey"  style="background-color: #cbcbcb;">
+            Pending 
+          </strong></td>
+    
+          <td class="govuk-table__cell" data-sort-value="12">15</td>
+
+          <td class="govuk-table__cell " data-sort-value="4">15</td>
+
+          <td class="govuk-table__cell " data-sort-value="active">
+            <strong class="govuk-tag">
+            Active
+          </strong></td>
+    
+        </tr>
+
+        <tr class="govuk-table__row">
+    
+          <td class="govuk-table__cell"><a href="#" class="govuk-link">Aliquan doloris empre</a></td>
+    
+          <td class="govuk-table__cell" data-sort-value="15 Apr 2023 - 02 Jun 2023">25 Apr 2023</td>
+
+          <td class="govuk-table__cell" data-sort-value="15 Apr 2023 - 02 Jun 2023">25 May 2023</td>
+    
+          <td class="govuk-table__cell " data-sort-value="12">8</td>
+
+          <td class="govuk-table__cell " data-sort-value="4">8</td>
+
+          <td class="govuk-table__cell " data-sort-value="active">
+            <strong class="govuk-tag">
+            Active
+          </strong></td>
+
+        </tr>
+    
+      </tbody>
+    </table>
+
+
+{% endblock %}

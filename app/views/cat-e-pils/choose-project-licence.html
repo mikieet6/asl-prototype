@@ -1,0 +1,108 @@
+{% extends "../layouts/aspel-layout.html" %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="establishment-overview">University of Croydon</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="courses-overview">Create a course</a>
+    </li> 
+  </ol>
+</div>
+{% endblock %}
+
+
+
+{% block content %}
+
+
+
+<!-- Add your page content here -->
+
+
+  <h1 class="govuk-heading-l" style="margin-bottom:30px;">Choose a project licence</h1>
+  <p class="govuk-body">
+    You need a project licence which is approved for higher education or training to create a course. &nbsp; 
+    <br><a href="#" class="govuk-link">Apply for a project licence</a>&nbsp; 
+  </p>
+
+    
+  <table class="govuk-table" >
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th class="govuk-table__header" scope="col" >Select </th>
+        <th class="govuk-table__header" scope="col">Licence name</a></th>
+        <th class="govuk-table__header" scope="col" >Licence number</th>
+        <th class="govuk-table__header" scope="col">Expiry date</th>
+        <!-- <th class="govuk-table__header  govuk-table__header--numeric" scope="col">Status</th> -->
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;padding-left: 15px;">
+          <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+            </div>
+          </div>
+        </td>
+        <td class="govuk-table__cell" scope="col">Croydon University training courses</a></td>
+        <td class="govuk-table__cell" scope="col"><a href="0#" style="color: #1d70b8;">PP12345678</a></td>
+        <td class="govuk-table__cell" scope="col">26 Apr 2026 </td>
+        <!-- <td class="govuk-table__cell govuk-table__cell--numeric" scope="col"><strong style="background: #005ea5;padding: 3px 6px;color: white;text-transform: uppercase;font-weight: bold;white-space: nowrap;">active</strong></td> -->
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;padding-left: 15px;">
+          <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+            </div>
+          </div>
+        </td>
+        <td class="govuk-table__cell" scope="col">Colabra tentare santinas </a></td>
+        <td class="govuk-table__cell" scope="col"><a href="0#" style="color: #1d70b8;">PP23456789</a></td>
+        <td class="govuk-table__cell" scope="col">14 Aug 2023 </td>
+        <!-- <td class="govuk-table__cell govuk-table__cell--numeric" scope="col" ><strong style="background: #005ea5;padding: 3px 6px;color: white;text-transform: uppercase;font-weight: bold;white-space: nowrap;">active</strong></td> -->
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell" scope="col" style="padding-bottom: 0px;padding-top: 2px;padding-left: 15px;">
+          <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="waste"></label>
+            </div>
+          </div>
+        </td>
+        <td class="govuk-table__cell" scope="col">Dolore provocas senatus doloris sempre</a></td>
+        <td class="govuk-table__cell" scope="col"><a href="0#" style="color: #1d70b8;">PP34567890</a></td>
+        <td class="govuk-table__cell" scope="col">21 Oct 2023 </td>
+        <!-- <td class="govuk-table__cell govuk-table__cell--numeric" scope="col" ><strong style="background: #005ea5;padding: 3px 6px;color: white;text-transform: uppercase;font-weight: bold;white-space: nowrap;">active</strong></td> -->
+      </tr>
+      
+    </tbody>
+  </table> 
+  <form action="add-course-details" method="post" novalidate>
+    <div class="govuk-button-group">
+    <button class="govuk-button" data-module="govuk-button">
+    Save and continue
+    </button>
+    <a class="govuk-link" href="">Cancel</a></div>
+  </form>
+
+
+
+{% endblock %}

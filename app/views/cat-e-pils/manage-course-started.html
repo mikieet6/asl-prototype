@@ -1,0 +1,176 @@
+{% extends "../layouts/aspel-layout.html" %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="establishment-overview">University of Croydon</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="courses-overview">Courses overview</a>
+    </li> 
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="manage-course-started.html">Owl habitat protection</a>
+    </li> 
+  </ol>
+</div>
+{% endblock %}
+
+
+
+{% block content %}
+
+
+
+<!-- Add your page content here -->
+
+
+<span class="govuk-caption-l">Manage course</span>
+<h1 class="govuk-heading-l" >Owl habitat protection</h1>
+
+    
+ 
+  
+<dl class="govuk-summary-list govuk-summary-list--no-border">
+   
+  <div class="govuk-summary-list__row"> 
+    <dt class="govuk-summary-list__key"style="padding-bottom: 0px;" >Course name</dt>
+    <dd class="govuk-summary-list__value">Owl habitat protection</dd>
+  </div>
+  <div class="govuk-summary-list__row"> 
+    <dt class="govuk-summary-list__key"style="padding-bottom: 0px;" >Start date</dt>
+    <dd class="govuk-summary-list__value">15 Apr 2023</dd>
+    <dd class="govuk-summary-list__value"></dd>
+    </div>
+    <div class="govuk-summary-list__row"> 
+      <dt class="govuk-summary-list__key"style="padding-bottom: 0px;" >End date</dt>
+      <dd class="govuk-summary-list__value">02 Jun 2023</dd>
+      <dd class="govuk-summary-list__value"></dd>
+      </div>
+    <div class="govuk-summary-list__row"> 
+      <dt class="govuk-summary-list__key"style="padding-bottom: 0px;" >Animals to be used</dt>
+      <dd class="govuk-summary-list__value">Mice (Rodentia), Rat (Rattus rattus)</dd>
+      <dd class="govuk-summary-list__value"></dd>
+    </div>
+    <div class="govuk-summary-list__row"> 
+      <dt class="govuk-summary-list__key"style="padding-bottom: 0px;" >Project licence title</dt>
+      <dd class="govuk-summary-list__value">Croydon University training courses</dd>
+    </div>
+      <div class="govuk-summary-list__row"> 
+        <dt class="govuk-summary-list__key"style="padding-bottom: 0px;" >Project licence number</dt>
+        <dd class="govuk-summary-list__value"><a href="#" class="govuk-link">PP666888</a></dd>
+      </div>
+</dl>
+
+<div class="govuk-button-group">
+  <!-- <form action="change-course-end-date" method="post" novalidate>
+  <button class="govuk-button govuk-button--secondary" style=" background-color: #cbcbcb;" data-module="govuk-button">
+    Edit course details
+  </button></form> -->
+  <form action="cancel-course" method="post" novalidate>
+  <button class="govuk-button govuk-button--secondary" style=" background-color: #ffff;" data-module="govuk-button">
+    Cancel course
+  </button></form>
+</div>
+
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+  <h2 class="govuk-heading-m" style="margin-top: 40px;margin-bottom: 20px;">Course participants</h2>
+
+  <form action="enter-participant-details" method="post" novalidate>
+    <button class="govuk-button " data-module="govuk-button">
+      Invite another participant
+    </button></form>
+
+    <table class="govuk-table" style="margin-bottom: 20px;">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header"  >Name</th>
+          <th class="govuk-table__header"  >Email</th>
+          <th class="govuk-table__header"  >Organisation</th>
+          <th class="govuk-table__header"  >Licence <br>status</th>
+          <th class="govuk-table__header govuk-table__header--numeric" > Action</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row" id="mydiv2">
+          <td class="govuk-table__cell" ><a href="#" style="color: #1d70b8;">Peter Smith-Johnson</a></td>
+          <td class="govuk-table__cell" >peter.smith@acme.com</td>
+          <td class="govuk-table__cell" >ACME Limited</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag">Active</strong></td>
+          <td class="govuk-table__cell"  style="text-align: right;"><a href="#" style="color: #1d70b8;">Revoke</a></td>
+        </tr>
+        <tr class="govuk-table__row" id="mydiv" >
+          <td class="govuk-table__cell" ><a href="#" style="color: #1d70b8;">Maria Summerland</a></td>
+          <td class="govuk-table__cell" >maria.summerland@colabra.co.uk</td>
+          <td class="govuk-table__cell" >Colabra Associated</td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag">Active</strong></td>
+          <td class="govuk-table__cell"  style="text-align: right;"><a href="#" style="color: #1d70b8;">Revoke</a></td>
+        </tr>
+        <tr class="govuk-table__row" id="mydiv2">
+          <td class="govuk-table__cell" ><a href="#" style="color: #1d70b8;">Soren Lawrenson</a></td>
+          <td class="govuk-table__cell" >soren.lawrenson@ucl.edu.uk</td>
+          <td class="govuk-table__cell" >UCL</td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag">Active</strong></td>
+          <td class="govuk-table__cell"  style="text-align: right;"><a href="#" style="color: #1d70b8;">Revoke</a></td>
+        </tr>
+        <tr class="govuk-table__row" id="mydiv" >
+          <td class="govuk-table__cell" ><a href="#" style="color: #1d70b8;">Arrow Bovier</a></td>
+          <td class="govuk-table__cell" >a.bovier@nickelassociates.co.uk</td>
+          <td class="govuk-table__cell" >Nickel Associates</td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag">Active</strong></td>
+          <td class="govuk-table__cell"  style="text-align: right;"><a href="#" style="color: #1d70b8;">Revoke</a></td>
+        </tr>
+        <tr class="govuk-table__row" id="mydiv2">
+          <td class="govuk-table__cell" ><a href="#" style="color: #1d70b8;">Jodge Mandalorian</a></td>
+          <td class="govuk-table__cell" >jodgemh@nots.edu.co.uk</td>
+          <td class="govuk-table__cell" >Nottingham University</td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag">Active</strong></td>
+          <td class="govuk-table__cell"  style="text-align: right;"><a href="#" style="color: #1d70b8;">Revoke</a></td>
+        </tr>
+        <tr class="govuk-table__row" id="mydiv" >
+          <td class="govuk-table__cell" ><a href="#" style="color: #1d70b8;">Hawkeye Enjolras</a></td>
+          <td class="govuk-table__cell" >h.enjolrasd@defra.gov.uk</td>
+          <td class="govuk-table__cell" >DEFRA</td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag">Active</strong></td>
+          <td class="govuk-table__cell"  style="text-align: right;"><a href="#" style="color: #1d70b8;">Revoke</a></td>
+        </tr>
+        <tr class="govuk-table__row" id="mydiv2">
+          <td class="govuk-table__cell" ><a href="#" style="color: #1d70b8;">Dori Celdon</a></td>
+          <td class="govuk-table__cell" >dori-celdon@acme.com</td>
+          <td class="govuk-table__cell" >ACME Limited</td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag">Active</strong></td>
+          <td class="govuk-table__cell"  style="text-align: right;"><a href="#" style="color: #1d70b8;">Revoke</a></td>
+        </tr>
+        <tr class="govuk-table__row" id="mydiv" >
+          <td class="govuk-table__cell" ><a href="#" style="color: #1d70b8;">Paddington Sefton</a></td>
+          <td class="govuk-table__cell" >padd.sefton@bristol.edu.uk</td>
+          <td class="govuk-table__cell" >Bristol University</td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag">Active</strong></td>
+          <td class="govuk-table__cell"  style="text-align: right;"><a href="#" style="color: #1d70b8;">Revoke</a></td>
+        </tr>
+      </tbody>
+    </table>
+  <div>
+  
+  </div>
+
+
+  <br>
+  <!-- <form action="confirmation-new-participant-added" method="post" novalidate>
+    <button class="govuk-button" data-module="govuk-button">
+    Save and continue
+    </button>
+  </form> -->
+
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends "../layouts/aspel-layout.html" %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="establishment-overview">University of Croydon</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="courses-overview">Courses overview</a>
+    </li> 
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="manage-course-changed-dates.html">Owl habitat protection</a>
+    </li> 
+  </ol>
+</div>
+{% endblock %}
+
+
+
+{% block content %}
+
+
+
+<!-- Add your page content here -->
+<span class="govuk-caption-l">Owl habitat protection</span>
+<h1 class="govuk-heading-l" >Check change course dates</h1>
+
+<dl class="govuk-summary-list">
+   
+  <div class="govuk-summary-list__row"> 
+    <dt class="govuk-summary-list__key"style="padding-bottom: 0px;" >Course name</dt>
+    <dd class="govuk-summary-list__value">Owl habitat protection</dd>
+  </div>
+  <div class="govuk-summary-list__row"> 
+    <dt class="govuk-summary-list__key"style="padding-bottom: 0px;" >Start date</dt>
+    <dd class="govuk-summary-list__value">15 Apr 2023</dd>
+    </div>
+    <div class="govuk-summary-list__row"> 
+      <dt class="govuk-summary-list__key"style="padding-bottom: 0px;" > Previous end date</dt>
+      <dd class="govuk-summary-list__value">	02 Jun 2023</dd>
+      </div>
+    <div class="govuk-summary-list__row"> 
+      <dt class="govuk-summary-list__key"style="padding-bottom: 0px;" >New end date</dt>
+      <dd class="govuk-summary-list__value"><mark class="hods-highlight"> <strong>25 Jun 2023</strong> </mark>	</dd>
+      </div>
+      <div class="govuk-summary-list__row"> 
+        <dt class="govuk-summary-list__key"style="padding-bottom: 0px;" >Reason for the change</dt>
+        <dd class="govuk-summary-list__value">	Gummies cotton candy halvah tiramisu pie liquorice lemon drops candy canes drag\xe9e wafer, sweet roll ice cream shortbread marzipan sugar plum brownie macaroon sweet marshmallow, topping candy lollipop caramels cookie jelly souffl\xe9 oat cake.</dd>
+      </div>
+</dl>
+
+  <form action="confirmation-end-date-change-submitted" method="post" novalidate>
+    <div class="govuk-button-group">
+    <button class="govuk-button" data-module="govuk-button">
+    Submit for approval
+    </button>
+    <a class="govuk-link" href="">Cancel</a>
+  </div></form>
+
+
+
+
+{% endblock %}

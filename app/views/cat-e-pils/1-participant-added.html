@@ -1,0 +1,143 @@
+{% extends "../layouts/aspel-layout.html" %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="establishment-overview">University of Croydon</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="courses-overview">Create a course</a>
+    </li> 
+  </ol>
+</div>
+{% endblock %}
+
+
+
+{% block content %}
+
+
+
+<!-- Add your page content here -->
+
+<span class="govuk-caption-l">Dragon flight school</span> 
+  <h1 class="govuk-heading-l" >Add participants</h1>
+
+  <details class="govuk-details" data-module="govuk-details">
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+        Course details
+      </span>
+    </summary>
+    <dl class="govuk-summary-list govuk-summary-list--no-border">
+   
+      <div class="govuk-summary-list__row"> 
+        <dt class="govuk-summary-list__key"style="padding-bottom: 0px;" >Course name</dt>
+        <dd class="govuk-summary-list__value">Dragon flight school</dd>
+      </div>
+      <div class="govuk-summary-list__row"> 
+        <dt class="govuk-summary-list__key"style="padding-bottom: 0px;" >Course start date</dt>
+        <dd class="govuk-summary-list__value">14 Aug 2023</dd>
+        </div>
+        <div class="govuk-summary-list__row"> 
+          <dt class="govuk-summary-list__key"style="padding-bottom: 0px;" >Course end date</dt>
+          <dd class="govuk-summary-list__value">28 Sep 2023</dd>
+          </div>
+        <div class="govuk-summary-list__row"> 
+          <dt class="govuk-summary-list__key"style="padding-bottom: 0px;" >Animals used</dt>
+          <dd class="govuk-summary-list__value">Mice (Rodentia) <br> Rat (Rattus rattus)</dd>
+        </div>
+        <a class="govuk-link" href="add-course-details.html">Change course details</a>
+        <hr style="margin-bottom:12px;border:none">
+        <div class="govuk-summary-list__row"> 
+          <dt class="govuk-summary-list__key"style="padding-bottom: 0px;" >Project licence title</dt>
+          <dd class="govuk-summary-list__value">University of Croydon training courses</dd>
+        </div>
+          <div class="govuk-summary-list__row"> 
+            <dt class="govuk-summary-list__key"style="padding-bottom: 0px;" >Project licence number</dt>
+            <dd class="govuk-summary-list__value"><a href="#" class="govuk-link">PP12345678</a></dd>
+          </div>
+        <a class="govuk-link" href="choose-project-licence.html">Change project licence</a>
+        <hr style="margin-bottom:12px;border:none">
+    </dl>
+  </details>
+  
+ 
+
+
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+  <h2 class="govuk-heading-m" style="margin-top: 40px;margin-bottom: 20px;">Course participants</h2>
+
+  
+    <button class="govuk-button" data-module="govuk-button" onclick="toggle(this)">
+      Invite another participant
+    </button>
+
+
+  <div style="border-left: none;padding-left: 0px;margin-bottom: 0px;">
+    <table class="govuk-table" style="margin-bottom: 20px;">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col" width="400">Name</th>
+          <th class="govuk-table__header" scope="col" width="300">Email</th>
+          <th class="govuk-table__header" scope="col" width="300">Organisation</th>
+          <th class="govuk-table__header" scope="col" width="200" style="text-align: right;"> Action</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row" id="mydiv2">
+          <td class="govuk-table__cell" scope="col"><a href="0#" style="color: #1d70b8;">Peter Smith-Johnson</a></td>
+          <td class="govuk-table__cell" scope="col">peter.smith@acme.com</td>
+          <td class="govuk-table__cell" scope="col">ACME Limited</td>
+          <td class="govuk-table__cell" scope="col" style="text-align: right;"><a href="#0" style="color: #005ea5;">Remove Peter</a></td>
+        </tr>
+        <tr class="govuk-table__row" id="mydiv" hidden="hidden">
+          <td class="govuk-table__cell" scope="col"><a href="0#" style="color: #1d70b8;">Maria Summerland</a></td>
+          <td class="govuk-table__cell" scope="col">maria.summerland@colabra.co.uk</td>
+          <td class="govuk-table__cell" scope="col">Colabra Associated</td>
+          <td class="govuk-table__cell" scope="col" style="text-align: right;"><a href="#0" style="color: #005ea5;">Remove Maria</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    let toggle = button => {
+      let element = document.getElementById("mydiv");
+      let hidden = element.getAttribute("hidden");
+
+      let element2 = document.getElementById("mydiv2");
+      let hidden2 = element2.getAttribute("hidden");
+
+      if (hidden) {
+         element.removeAttribute("hidden");
+         button.innerText = "Invite another participant";
+      } else {
+         element.setAttribute("hidden", "hidden");
+      }
+
+
+
+    }
+  </script>
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" >
+  
+  <form action="confirmation" method="post" novalidate>
+    <button class="govuk-button" data-module="govuk-button">
+    Save and continue
+    </button>
+  </form>
+
+{% endblock %}

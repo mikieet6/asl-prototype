@@ -1,0 +1,67 @@
+{% extends "../layouts/aspel-layout.html" %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="establishment-overview">University of Croydon</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="courses-overview">Courses overview</a>
+    </li> 
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="manage-course-changed-dates.html">Dragon flight school</a>
+    </li> 
+  </ol>
+</div>
+{% endblock %}
+
+
+
+{% block content %}
+
+
+
+<!-- Add your page content here -->
+
+<span class="govuk-caption-l">Dragon flight school</span> 
+<h1 class="govuk-heading-l" >Change course dates</h1>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukPanel({
+        titleText: "Confirmed",
+        html: " "
+      }) }}
+
+
+      <h2 class="govuk-heading-m">
+        What happens next
+      </h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>All participants' Category E training licences will be activated on the new course start date and will be revoked on the new end date.</li>
+        <li>Participants will receive an email about the changes to the course dates.</li>
+      </ul>
+      <p>
+        <a href="manage-course-changed-dates.html" class="govuk-link govuk-link--no-visited-state">Manage 'Dragon training school' course</a><br>
+        <a href="courses-overview-dates-changed.html" class="govuk-link govuk-link--no-visited-state">Return to training courses</a>
+        
+      </p>
+    </div>
+  </div>
+  
+  
+
+{% endblock %}

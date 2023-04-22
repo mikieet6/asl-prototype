@@ -1,0 +1,86 @@
+{% extends "../layouts/aspel-layout.html" %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="establishment-overview">University of Croydon</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="courses-overview">Create a course</a>
+    </li> 
+  </ol>
+</div>
+{% endblock %}
+
+
+
+{% block content %}
+
+
+
+<!-- Add your page content here -->
+
+
+<span class="govuk-caption-l">Dragon flight school</span>
+<h1 class="govuk-heading-l" >Check participant details</h1>
+  
+
+  <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">First name</dt>
+      <dd class="govuk-summary-list__value"> Peter</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Last name</dt>
+      <dd class="govuk-summary-list__value"> Smith-Johnson</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Participant is over 18</dt>
+      <dd class="govuk-summary-list__value"> yes</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Email address</dt>
+      <dd class="govuk-summary-list__value">peter.smith@acme.com</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Organisation</dt>
+      <dd class="govuk-summary-list__value">ACME limited</dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Job title or career stage</dt>
+      <dd class="govuk-summary-list__value"></dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Participant's field of expertise</dt>
+      <dd class="govuk-summary-list__value"></dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Explain how their career will benefit from this training</dt>
+      <dd class="govuk-summary-list__value"></dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Other notes</dt>
+      <dd class="govuk-summary-list__value"></dd>
+    </div>
+    <hr style="margin-top:8px;border:none">
+    <a class="govuk-link" href="enter-participant-details">Change participant details</a>
+  </dl>
+
+<form action="1-participant-added" method="post" novalidate>
+  <button class="govuk-button" data-module="govuk-button">
+  Save and continue
+  </button>
+</form>
+
+{% endblock %}

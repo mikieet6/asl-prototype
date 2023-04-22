@@ -1,0 +1,133 @@
+{% extends "../layouts/aspel-layout.html" %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Home</a>
+    </li>
+  </ol>
+</div>
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- css specific to this template -->
+<style type="text/css">
+  .establishment-container {
+  background: #f8f8f8;
+  border: 1px solid #6f777b;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.establishment-metadata {
+  border-top: 3px solid #8f23b3;
+  padding-top: 15px;
+}
+</style> 
+
+<!-- Add your page content here -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      University of Croydon
+    </h1>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">     
+    <div class="establishment-container">
+      <p>
+        <a href="#" class="govuk-link govuk-link--no-visited-state">Establishment details</a><br>
+        Contact information, conditions and authorisations.
+      </p>
+    </div>
+    <div class="establishment-container">
+      <p>
+        <a href="#" class="govuk-link govuk-link--no-visited-state">Approved areas</a><br>
+        Approved areas where animals may be used.
+      </p>
+    </div>
+   <div class="establishment-container">
+      <p>
+        <a href="#" class="govuk-link govuk-link--no-visited-state">People</a><br>
+        People affiliated with University of Croydon including named people, licence holders and Home Office liaison contacts.
+      </p>
+    </div>
+    <div class="establishment-container">
+      <p>
+        <a href="#" class="govuk-link govuk-link--no-visited-state">Personal licences</a><br>
+        Personal licences held at University of Croydon.
+      </p>
+    </div>
+    <div class="establishment-container">
+      <p>
+        <a href="courses-overview-course-added.html" class="govuk-link govuk-link--no-visited-state">Higher education or training courses</a><br>
+        Create and manage courses. <br>Apply for and view Category E personal licences. 
+      </p>
+    </div>
+    <div class="establishment-container">
+      <p>
+        <a href="#" class="govuk-link govuk-link--no-visited-state">Projects</a><br>
+        Projects held at University of Croydon and those held elsewhere but licensed to work here.
+      </p>
+    </div>
+ 
+  <div class="establishment-container">
+    <p>
+      <a href="#" class="govuk-link govuk-link--no-visited-state">Returns of procedures</a><br>
+      View and manage all returns of procedures at University of Croydon.
+    </p>
+  </div>
+  <div class="establishment-container">
+    <p>
+      <a href="#" class="govuk-link govuk-link--no-visited-state">Licence fees</a><br>
+      All billable licences held at University of Croydon.
+    </p>
+  </div>
+</div>
+  <div class="govuk-grid-column-one-third ">
+    <div class="establishment-metadata">
+    
+      <h3 class="govuk-heading-s">Establishment licence number
+        <br><span class="govuk-body">XCC09J64D</span>
+      </h3>
+      <h3 class="govuk-heading-s">Establishment licence type
+        <br><span class="govuk-body">Project licence</span>
+      </h3>
+      <h3 class="govuk-heading-s">Establishment licence holder
+        <br><span class="govuk-body"><a href="#" class="govuk-link govuk-link--no-visited-state">Bruce Banner</a></span>
+      </h3>
+      <h3 class="govuk-heading-s">Named person responsible for compliance (NPRC)
+        <br><span class="govuk-body"><a href="#" class="govuk-link govuk-link--no-visited-state">Susan Smith</a></span>
+      </h3>
+      <h3 class="govuk-heading-s">Home Office Liaison Contact (HOLC)
+        <br><span class="govuk-body"><a href="#" class="govuk-link govuk-link--no-visited-state">Susan Smith</a></span>
+      </h3>
+      <!-- <h3 class="govuk-heading-s">Inspectors
+        <br><span class="govuk-body"><a href="#" class="govuk-link govuk-link--no-visited-state">Inspector Morse</a></span>
+      </h3>
+      <h3 class="govuk-heading-s">Single Point of Contact (SPoC)
+        <br><span class="govuk-body"><a href="#" class="govuk-link govuk-link--no-visited-state">Julie Stevens</a></span>
+      </h3> -->
+
+    
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}

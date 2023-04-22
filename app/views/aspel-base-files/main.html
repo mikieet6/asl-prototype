@@ -1,0 +1,259 @@
+{% extends "../layouts/aspel-layout.html" %}
+
+{% block beforeContent %}
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Passports, travel and living abroad</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Travel abroad</a>
+    </li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<!-- Add your page content here -->
+
+<div class="hods-alert">
+    <h2 class="hods-alert__heading">Success</h2>
+    <p>
+      Hello you have added a banner
+    </p>
+  </div>
+  <time class="hods-time" datetime="22:37">
+    10:37pm
+  </time>
+  <br><br>
+  <details class="hods-expandable-banner">
+    <summary class="hods-expandable-banner__summary">
+      Draft
+    </summary>
+    <div class="hods-expandable-banner__text">
+      This licence is not active. The licence holder or
+      applicant is not authorised to carry out the
+      programme of work as stated in this
+      licence/application.
+    </div>
+  </details>
+  <br>
+  <div class="hods-status-message">
+    <div>
+      <div class="hods-status-message__status">
+        And you have a status message! 
+      </div>
+    </div>
+  </div>
+  <br> <br>
+<table class="govuk-table" data-module="moj-sortable-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">The table caption</caption>
+
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+  
+        <th scope="col" class="govuk-table__header" aria-sort="ascending">Name</th>
+  
+        <th scope="col" class="govuk-table__header" aria-sort="none">Elevation</th>
+  
+        <th scope="col" class="govuk-table__header" aria-sort="none">Continent</th>
+  
+        <th scope="col" class="govuk-table__header govuk-table__header--numeric" aria-sort="none">First summit</th>
+  
+      </tr>
+    </thead>
+  
+    <tbody class="govuk-table__body">
+  
+      <tr class="govuk-table__row">
+  
+        <td class="govuk-table__cell">Aconcagua</td>
+  
+        <td class="govuk-table__cell" data-sort-value="6961">6,961 meters</td>
+  
+        <td class="govuk-table__cell">South America</td>
+  
+        <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1897">1897</td>
+  
+      </tr>
+  
+      <tr class="govuk-table__row">
+  
+        <td class="govuk-table__cell">Denali</td>
+  
+        <td class="govuk-table__cell" data-sort-value="6194">6,194 meters</td>
+  
+        <td class="govuk-table__cell">North America</td>
+  
+        <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1913">1913</td>
+  
+      </tr>
+  
+      <tr class="govuk-table__row">
+  
+        <td class="govuk-table__cell">Elbrus</td>
+  
+        <td class="govuk-table__cell" data-sort-value="5642">5,642 meters</td>
+  
+        <td class="govuk-table__cell">Europe</td>
+  
+        <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1874">1874</td>
+  
+      </tr>
+  
+      <tr class="govuk-table__row">
+  
+        <td class="govuk-table__cell">Everest</td>
+  
+        <td class="govuk-table__cell" data-sort-value="8850">8,850 meters</td>
+  
+        <td class="govuk-table__cell">Asia</td>
+  
+        <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1953">1953</td>
+  
+      </tr>
+  
+      <tr class="govuk-table__row">
+  
+        <td class="govuk-table__cell">Kilimanjaro</td>
+  
+        <td class="govuk-table__cell" data-sort-value="5895">5,895 meters</td>
+  
+        <td class="govuk-table__cell">Africa</td>
+  
+        <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1889">1889</td>
+  
+      </tr>
+  
+      <tr class="govuk-table__row">
+  
+        <td class="govuk-table__cell">Puncak Jaya</td>
+  
+        <td class="govuk-table__cell" data-sort-value="4884">4,884 meters</td>
+  
+        <td class="govuk-table__cell">Australia</td>
+  
+        <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1962">1962</td>
+  
+      </tr>
+  
+      <tr class="govuk-table__row">
+  
+        <td class="govuk-table__cell">Vinson</td>
+  
+        <td class="govuk-table__cell" data-sort-value="4897">4,897 meters</td>
+  
+        <td class="govuk-table__cell">Antarctica</td>
+  
+        <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1966">1966</td>
+  
+      </tr>
+  
+    </tbody>
+  </table>
+
+  <nav class="govuk-pagination" role="navigation" aria-label="results">
+    <div class="govuk-pagination__prev">
+      <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
+        <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+          <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+        </svg>
+        <span class="govuk-pagination__link-title">Previous</span></a>
+    </div>
+    <ul class="govuk-pagination__list">
+      <li class="govuk-pagination__item">
+        <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
+          1
+        </a>
+      </li>
+      <li class="govuk-pagination__item govuk-pagination__item--current">
+        <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
+          2
+        </a>
+      </li>
+      <li class="govuk-pagination__item">
+        <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+          3
+        </a>
+      </li>
+    </ul>
+    <div class="govuk-pagination__next">
+      <a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span class="govuk-pagination__link-title">Next</span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+          <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+        </svg></a>
+    </div>
+  </nav>
+
+  <br>
+  
+
+  <br>
+  <div class="hods-timeline">
+    <div class="hods-timeline__item">
+      <h2 class="hods-timeline__title">
+        Response submitted
+      </h2>
+      <p class="hods-timeline__date">
+        <time
+          class="hods-date-time"
+          datetime="2021-03-15T16:27:00.000Z"
+        >
+          15 March 2021 at 4:27pm
+        </time>
+      </p>
+      <p class="hods-timeline__description">
+        Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut
+        enim ad minim veniam, quis nostrud exercitation
+        ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in
+        reprehenderit in voluptate velit esse cillum
+        dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa
+        qui officia deserunt mollit anim id est laborum.
+      </p>
+    </div>
+    <div class="hods-timeline__item">
+      <h2 class="hods-timeline__title">
+        Issue under investigation
+      </h2>
+      <p class="hods-timeline__by">
+        by Douglas Pollock
+      </p>
+      <p class="hods-timeline__date">
+        <time
+          class="hods-date-time"
+          datetime="2021-03-15T10:04:00.000Z"
+        >
+          15 March 2021 at 10:04am
+        </time>
+      </p>
+      <p class="hods-timeline__description">
+        This is a description of the event. This field
+        accepts unformatted text only.
+      </p>
+    </div>
+    <div class="hods-timeline__item">
+      <h2 class="hods-timeline__title">
+        Issue raised on GitHub
+      </h2>
+      <p class="hods-timeline__by">by Karypun</p>
+      <p class="hods-timeline__date">
+        <time
+          class="hods-date-time"
+          datetime="2021-01-25T09:35:00.000Z"
+        >
+          25 January 2021 at 9:35am
+        </time>
+      </p>
+      <p class="hods-timeline__description">
+        This is a description of the event.
+      </p>
+    </div>
+  </div>
+{% endblock %}

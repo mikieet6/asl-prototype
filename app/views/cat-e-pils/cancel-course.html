@@ -1,0 +1,108 @@
+{% extends "../layouts/aspel-layout.html" %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="establishment-overview">University of Croydon</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="courses-overview">Courses overview</a>
+    </li> 
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="manage-course-started.html">Manage a course</a>
+    </li> 
+  </ol>
+</div>
+{% endblock %}
+
+
+
+{% block content %}
+
+
+
+<!-- Add your page content here -->
+
+<span class="govuk-caption-l">Dragon flight school</span>
+<h1 class="govuk-heading-l" >Are you sure you want to cancel this course? </h1>
+
+<!-- <dl class="govuk-summary-list govuk-summary-list--no-border">
+   
+  <div class="govuk-summary-list__row"> 
+    <dt class="govuk-summary-list__key"style="padding-bottom: 0px;" >Course name</dt>
+    <dd class="govuk-summary-list__value">Dragon flight school</dd>
+  </div>
+  <div class="govuk-summary-list__row"> 
+    <dt class="govuk-summary-list__key"style="padding-bottom: 0px;" >Start date</dt>
+    <dd class="govuk-summary-list__value">14 Aug 2023</dd>
+    <dd class="govuk-summary-list__value"></dd>
+    </div>
+    <div class="govuk-summary-list__row"> 
+      <dt class="govuk-summary-list__key"style="padding-bottom: 0px;" >End date</dt>
+      <dd class="govuk-summary-list__value">	28 Sep 2023</dd>
+      <dd class="govuk-summary-list__value"></dd>
+      </div>
+</dl> -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>
+    All participant's Category E training licences will be immediately revoked when you confirm this cancellation.
+  </strong>
+</div>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+          Yes, I want to proceed
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+          No, cancel request
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="more-detail">
+    <strong>Explain why you are cancelling this course (optional)</strong>
+  </label>
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
+</div> 
+
+
+
+<form action="check-cancel-course" method="post" novalidate>
+  <div class="govuk-button-group">
+    <button class="govuk-button" data-module="govuk-button">
+    Save and continue
+    </button>
+    <a class="govuk-link" href="manage-course.html">Cancel</a>
+  </div></form>
+  
+
+</div></div>
+
+{% endblock %}
