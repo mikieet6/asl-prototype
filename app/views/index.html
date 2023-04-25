@@ -6,17 +6,41 @@ Home – {{serviceName}} – GOV.UK Prototype Kit
 
 {% block content %}
 
+<h1 class="govuk-heading-xl">
+  ASPeL prototype  
+  <span class="govuk-caption-l">Using prototype kit version 13 and above</span>
+</h1>
+<p class="govuk-body"><a href="https://asl-prototypes.herokuapp.com/" class="govuk-link">Prototypes built with older versions of the kit</a></p>
+
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+<h2 class="govuk-heading-m">Category E training licences</h2>
+
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-
-    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
-
-    <h1 class="govuk-heading-xl">
-      Welcome to {{ serviceName }}
-    </h1>
-
-    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
+  <div class="govuk-grid-column-three-quarters">
+    <h3 class="govuk-heading-s">Research objectives </h3>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Can users set up a course and apply for participant's category E training licences?</li>
+    <li>Can users manage courses, change dates, cancel a course and revoke a licence? </li>
+    <li>What, if any, are the blockers in the proposed design? Is anything missing?</li>
+    <li>If time allows, establish the needs for longer higher education courses at universities. </li>
+</ul>
   </div>
 </div>
+
+
+
+<h3 class="govuk-heading-s" style="margin-bottom:10px">Links</h3>
+<ul class="govuk-list govuk-list--bullet">
+  <li><a href="https://collaboration.homeoffice.gov.uk/jira/browse/ASL-4189" class="govuk-link">Jira epic</a></li>
+  <li><a href="https://app.mural.co/t/enablers3351/m/mbtbf6246/1680784480758/c0e3157c27e39e134030f239b54864b48574a2d4?wid=0-1681126920662" class="govuk-link">Journey map</a></li>
+  <li><a href="https://app.mural.co/t/enablers3351/m/enablers3351/1682328112544/725be6deaf150d029c56560c22dd27f5b54b616a?sender=udf392ec435dfb8adf30d1228" class="govuk-link">Research mural</a></li>
+  <li><a href="cat-e-pils/research-index.html" class="govuk-link">Launch screen for usability testing</a></li>
+  <!-- <li><a href="" class="govuk-link">Research playback</a></li> -->
+</ul>
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
 {% endblock %}
