@@ -98,72 +98,81 @@
     </button></form>
 
   
-    <table class="govuk-table" style="margin-bottom: 20px;">
+    <table class="govuk-table" data-module="moj-sortable-table">
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
-          <th class="govuk-table__header"  >Name</th>
-          <th class="govuk-table__header"  >Email</th>
-          <th class="govuk-table__header"  >Organisation</th>
-          <th class="govuk-table__header"  >Licence <br>status</th>
-          <th class="govuk-table__header govuk-table__header--numeric" > Action</th>
+          <th class="govuk-table__header" aria-sort="descending" >Name</th>
+          <!-- <th class="govuk-table__header"  >Email</th> -->
+          <th class="govuk-table__header" aria-sort="none" >Organisation</th>
+          <th class="govuk-table__header" aria-sort="none" >Details</th>
+          <th class="govuk-table__header" aria-sort="none" >Status</th>
+          <th class="govuk-table__header "> Action</th>
         </tr>
       </thead>
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row" id="mydiv2">
-          <td class="govuk-table__cell" ><a href="#" style="color: #1d70b8;">Peter Smith-Johnson</a></td>
-          <td class="govuk-table__cell" >peter.smith@acme.com</td>
-          <td class="govuk-table__cell" >ACME Limited</td>
-          <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag">Active</strong></td>
-          <td class="govuk-table__cell"  style="text-align: right;"><a href="#" style="color: #1d70b8;">Revoke</a></td>
+          <td class="govuk-table__cell" data-sort-value="smith-johnson">Peter Smith-Johnson</td>
+          <!-- <td class="govuk-table__cell" >peter.smith@acme.com</td> -->
+          <td class="govuk-table__cell" data-sort-value="acme">ACME Limited</td>
+          <td class="govuk-table__cell" data-sort-value="AB1234567"><a href="#" class="govuk-link govuk-link--no-visited-state">AB1234567</a></td>
+          <td class="govuk-table__cell " data-sort-value="g"><strong class="govuk-tag">Granted</strong></td>
+          <td class="govuk-table__cell"  ><a href="revoke.html" style="color: #1d70b8;">Revoke licence</a></td>
         </tr>
         <tr class="govuk-table__row" id="mydiv" >
-          <td class="govuk-table__cell" ><a href="#" style="color: #1d70b8;">Maria Summerland</a></td>
-          <td class="govuk-table__cell" >maria.summerland@colabra.co.uk</td>
-          <td class="govuk-table__cell" >Colabra Associated</td>
-          <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag">Active</strong></strong></td>
-          <td class="govuk-table__cell"  style="text-align: right;"><a href="#" style="color: #1d70b8;">Revoke</a></td>
+          <td class="govuk-table__cell" data-sort-value="nickols">Maria Nickols</td>
+          <!-- <td class="govuk-table__cell" >maria.nickols@colabra.co.uk</td> -->
+          <td class="govuk-table__cell" data-sort-value="colabra">Colabra Associated</td>
+          <td class="govuk-table__cell" data-sort-value="LL8856779"><a href="#" class="govuk-link govuk-link--no-visited-state">LL8856779</a></td>
+          <td class="govuk-table__cell " data-sort-value="g"><strong class="govuk-tag">Granted</strong></td>
+          <td class="govuk-table__cell"  ><a href="#" style="color: #1d70b8;">Revoke licence</a></td>
         </tr>
         <tr class="govuk-table__row" id="mydiv2">
-          <td class="govuk-table__cell" ><a href="#" style="color: #1d70b8;">Soren Lawrenson</a></td>
-          <td class="govuk-table__cell" >soren.lawrenson@ucl.edu.uk</td>
-          <td class="govuk-table__cell" >UCL</td>
-          <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag">Active</strong></strong></td>
-          <td class="govuk-table__cell"  style="text-align: right;"><a href="#" style="color: #1d70b8;">Revoke</a></td>
+          <td class="govuk-table__cell" data-sort-value="lawrenson" >Soren Lawrenson</td>
+          <!-- <td class="govuk-table__cell" >soren.lawrenson@ucl.edu.uk</td> -->
+          <td class="govuk-table__cell" data-sort-value="ucl">UCL</td>
+         <td class="govuk-table__cell" data-sort-value="JD5388879"><a href="#" class="govuk-link govuk-link--no-visited-state">JD5388879</a></td>
+         <td class="govuk-table__cell " data-sort-value="g"><strong class="govuk-tag">Granted</strong></td>
+          <td class="govuk-table__cell"  ><a href="#" style="color: #1d70b8;">Revoke licence</a></td>
         </tr>
         <tr class="govuk-table__row" id="mydiv" >
-          <td class="govuk-table__cell" ><a href="#" style="color: #1d70b8;">Arrow Bovier</a></td>
-          <td class="govuk-table__cell" >a.bovier@nickelassociates.co.uk</td>
-          <td class="govuk-table__cell" >Nickel Associates</td>
-                    <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag">Active</strong></strong></td>
-          <td class="govuk-table__cell"  style="text-align: right;"><a href="#" style="color: #1d70b8;">Revoke</a></td>
+          <td class="govuk-table__cell" data-sort-value="bovier">Arrow Bovier</td>
+          <!-- <td class="govuk-table__cell" >a.bovier@nickelassociates.co.uk</td> -->
+          <td class="govuk-table__cell" data-sort-value="nickel">Nickel Associates</td>
+           <td class="govuk-table__cell" ><a href="#" class="govuk-link govuk-link--no-visited-state">View task</a></td>
+           <td class="govuk-table__cell " data-sort-value="a"><strong class="govuk-tag govuk-tag--grey" style="background-color: #cbcbcb;">Awaiting decision</strong></td>
+           <td class="govuk-table__cell"  ><a href="#" style="color: #1d70b8;"></a></td>
         </tr>
         <tr class="govuk-table__row" id="mydiv2">
-          <td class="govuk-table__cell" ><a href="#" style="color: #1d70b8;">Jodge Mandalorian</a></td>
-          <td class="govuk-table__cell" >jodgemh@nots.edu.co.uk</td>
-          <td class="govuk-table__cell" >Nottingham University</td>
-                    <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag">Active</strong></strong></td>
-          <td class="govuk-table__cell"  style="text-align: right;"><a href="#" style="color: #1d70b8;">Revoke</a></td>
+          <td class="govuk-table__cell" data-sort-value="mandalorian"><a href="#" style="color: #1d70b8;">Jodge Mandalorian</a></td>
+          <!-- <td class="govuk-table__cell" >jodgemh@nots.edu.co.uk</td> -->
+          <td class="govuk-table__cell" data-sort-value="nottingham">Nottingham University</td>
+                    <td class="govuk-table__cell" data-sort-value="IC9655578"><a href="#" class="govuk-link govuk-link--no-visited-state">IC9655578</a></td>
+                    <td class="govuk-table__cell " data-sort-value="g"><strong class="govuk-tag">Granted</strong></td>
+          <td class="govuk-table__cell"  ><a href="#" style="color: #1d70b8;">Revoke licence</a></td>
         </tr>
         <tr class="govuk-table__row" id="mydiv" >
-          <td class="govuk-table__cell" ><a href="#" style="color: #1d70b8;">Hawkeye Enjolras</a></td>
-          <td class="govuk-table__cell" >h.enjolrasd@defra.gov.uk</td>
-          <td class="govuk-table__cell" >DEFRA</td>
-                    <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag">Active</strong></strong></td>
-          <td class="govuk-table__cell"  style="text-align: right;"><a href="#" style="color: #1d70b8;">Revoke</a></td>
+          <td class="govuk-table__cell" data-sort-value="enjolras">Hawkeye Enjolras</td>
+          <!-- <td class="govuk-table__cell" >h.enjolrasd@defra.gov.uk</td> -->
+          <td class="govuk-table__cell" data-sort-value="defra">DEFRA</td>
+                    <td class="govuk-table__cell" data-sort-value="I64455468"><a href="#" class="govuk-link govuk-link--no-visited-state">I64455468</a></td>
+                    <td class="govuk-table__cell " data-sort-value="g"><strong class="govuk-tag">Granted</strong></td>
+          <td class="govuk-table__cell"  ><a href="#" style="color: #1d70b8;">Revoke licence</a></td>
         </tr>
         <tr class="govuk-table__row" id="mydiv2">
-          <td class="govuk-table__cell" ><a href="#" style="color: #1d70b8;">Dori Celdon</a></td>
-          <td class="govuk-table__cell" >dori-celdon@acme.com</td>
-          <td class="govuk-table__cell" >ACME Limited</td>
-                    <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag">Active</strong></strong></td>
-          <td class="govuk-table__cell"  style="text-align: right;"><a href="#" style="color: #1d70b8;">Revoke</a></td>
+          <td class="govuk-table__cell" data-sort-value="celdon">Dori Celdon</td>
+          <!-- <td class="govuk-table__cell" >dori-celdon@acme.com</td> -->
+          <td class="govuk-table__cell" data-sort-value="acme limited">ACME Limited</td>
+           <td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">View task</a></td>
+           <td class="govuk-table__cell " data-sort-value="a"><strong class="govuk-tag govuk-tag--grey" style="background-color: #cbcbcb;">Awaiting decision</strong></td>
+          <td class="govuk-table__cell"  ><a href="#" style="color: #1d70b8;"></a></td>
         </tr>
         <tr class="govuk-table__row" id="mydiv" >
-          <td class="govuk-table__cell" ><a href="#" style="color: #1d70b8;">Paddington Sefton</a></td>
-          <td class="govuk-table__cell" >padd.sefton@bristol.edu.uk</td>
-          <td class="govuk-table__cell" >Bristol University</td>
-                    <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag">Active</strong></strong></td>
-          <td class="govuk-table__cell"  style="text-align: right;"><a href="#" style="color: #1d70b8;">Revoke</a></td>
+          <td class="govuk-table__cell" data-sort-value="sefton">Paddington Sefton</td>
+          <!-- <td class="govuk-table__cell" >padd.sefton@bristol.edu.uk</td> -->
+          <td class="govuk-table__cell" data-sort-value="bristol">Bristol University</td>
+           <td class="govuk-table__cell"><a href="#" class="govuk-link govuk-link--no-visited-state">View task</a></td>
+          <td class="govuk-table__cell " data-sort-value="a"><strong class="govuk-tag govuk-tag--grey" style="background-color: #cbcbcb;">Awaiting decision</strong></td>
+          <td class="govuk-table__cell"  ><a href="#" class="govuk-link govuk-link--no-visited-state"></a></td>
         </tr>
       </tbody>
     </table>
